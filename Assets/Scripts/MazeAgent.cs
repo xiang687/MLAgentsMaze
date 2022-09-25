@@ -32,8 +32,16 @@ public class MazeAgent : Agent
         int moveX = actions.DiscreteActions[0] - 1;
         int moveZ = actions.DiscreteActions[1] - 1;
 
+        // TO DO:
+        // Here we should guanrantee the movement is just one grid on the platform for every step,
+        // otherwise the agent will not have a discrete behaviour coorsponding to integers {-1,0,1}.
+        // If directly using integers to update. for example 
+        // transform.localPosition += new Vector3(moveX, 0, moveZ);
+        // then we need to create a list of Pillar location to avoid going through,
+        // and also consider how collision event is still working. 
         float speed = 3f;
         transform.localPosition += new Vector3(moveX, 0, moveZ) * Time.deltaTime * speed;
+
     }
 
     // Give the reward as feedback
