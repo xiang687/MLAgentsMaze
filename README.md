@@ -1,4 +1,4 @@
-# MLAgentsMaze
+# Unity MLAgentsMaze
 
 Task: 
 
